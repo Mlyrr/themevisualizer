@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BB-8 Tandtekniker Theme Demo</title>
+
+<style>
+:root{
+--orange-main:#FF8A3D;
+--orange-light:#FFB26B;
+--blue-led:#3EA6FF;
+--silver:#9CA3AF;
+--dark-bg:#0F172A;
+--light-bg:#FFFFFF;
+--dark-section:#1E293B;
+--light-section:#F1F5F9;
+--dark-text:#F8FAFC;
+--light-text:#1F2933;
+}
+
+/* default dark */
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:var(--dark-bg);
+color:var(--dark-text);
+transition:0.3s;
+}
+
+/* light theme */
+body.light{
+background:var(--light-bg);
+color:var(--light-text);
+}
+
+/* header */
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+border-bottom:3px solid var(--orange-main);
+}
+
+.logo{
+font-size:24px;
+font-weight:bold;
+}
+
+.logo span{
+color:var(--orange-main);
+}
+
+/* navigation */
+nav a{
+margin-left:20px;
+text-decoration:none;
+color:inherit;
+font-weight:600;
+}
+
+nav a:hover{
+color:var(--orange-main);
+}
+
+/* theme button */
+.themeButton{
+background:var(--blue-led);
+color:white;
+border:none;
+padding:10px 16px;
+border-radius:6px;
+cursor:pointer;
+}
+
+/* hero */
+.hero{
+text-align:center;
+padding:90px 20px;
+}
+
+.hero h1{
+font-size:42px;
+color:var(--orange-main);
+}
+
+/* CTA button */
+.cta{
+background:var(--orange-main);
+border:none;
+padding:14px 30px;
+border-radius:8px;
+cursor:pointer;
+color:white;
+font-size:16px;
+margin-top:20px;
+}
+
+.cta:hover{
+background:var(--orange-light);
+}
+
+/* services section */
+.services{
+display:flex;
+justify-content:center;
+gap:30px;
+padding:50px;
+flex-wrap:wrap;
+}
+
+.card{
+padding:25px;
+border-radius:10px;
+border:1px solid var(--silver);
+width:220px;
+text-align:center;
+background:rgba(255,255,255,0.05);
+border-top:6px solid var(--orange-main);
+}
+
+body.light .card{
+background:var(--light-section);
+}
+
+/* blue accent */
+.blue{
+color:var(--blue-led);
+}
+
+/* footer */
+footer{
+text-align:center;
+padding:30px;
+border-top:3px solid var(--orange-main);
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">🦷 Tand<span>Teknik</span></div>
+
+<nav>
+<a href="#">Hjem</a>
+<a href="#">Ydelser</a>
+<a href="#">Om os</a>
+<a href="#">Kontakt</a>
+</nav>
+
+<button class="themeButton" onclick="toggleTheme()">Skift Dark / Light</button>
+
+</header>
+
+<section class="hero">
+
+<h1>BB‑8 Inspireret Tandteknik</h1>
+
+<p>Moderne løsninger til dit smil</p>
+
+<button class="cta">Book tid</button>
+
+</section>
+
+<section class="services">
+
+<div class="card">
+<h3 class="blue">Kroner</h3>
+<p>Holdbare tandkroner</p>
+</div>
+
+<div class="card">
+<h3 class="blue">Proteser</h3>
+<p>Komfortable proteser</p>
+</div>
+
+<div class="card">
+<h3 class="blue">Implantater</h3>
+<p>Moderne implantater</p>
+</div>
+
+</section>
+
+<footer>
+
+<p>© Tandtekniker Demo – BB‑8 Theme</p>
+
+</footer>
+
+<script>
+
+function toggleTheme(){
+document.body.classList.toggle("light");
+}
+
+</script>
+
+</body>
+</html>
