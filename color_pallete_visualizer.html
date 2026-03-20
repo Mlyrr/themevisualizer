@@ -3,23 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BB-8 Tandtekniker Theme Demo</title>
+<title>BB-8 Centered Demo</title>
 
 <style>
 :root{
---orange-main:#FF8A3D;
+--orange:#FF7A1A;
 --orange-light:#FFB26B;
---blue-led:#3EA6FF;
---silver:#9CA3AF;
+--blue:#3EA6FF;
+--silver:#C0C6CF;
 --dark-bg:#0F172A;
 --light-bg:#FFFFFF;
---dark-section:#1E293B;
---light-section:#F1F5F9;
 --dark-text:#F8FAFC;
 --light-text:#1F2933;
 }
 
-/* default dark */
 body{
 margin:0;
 font-family:Arial, sans-serif;
@@ -28,31 +25,31 @@ color:var(--dark-text);
 transition:0.3s;
 }
 
-/* light theme */
 body.light{
 background:var(--light-bg);
 color:var(--light-text);
 }
 
-/* header */
+/* CENTERED CONTAINER */
+.container{
+max-width:1100px;
+margin:0 auto;
+padding:0 20px;
+}
+
+/* HEADER */
 header{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px;
-border-bottom:3px solid var(--orange-main);
-}
-
-.logo{
-font-size:24px;
-font-weight:bold;
+padding:20px 0;
+border-bottom:3px solid var(--orange);
 }
 
 .logo span{
-color:var(--orange-main);
+color:var(--orange);
 }
 
-/* navigation */
 nav a{
 margin-left:20px;
 text-decoration:none;
@@ -61,12 +58,11 @@ font-weight:600;
 }
 
 nav a:hover{
-color:var(--orange-main);
+color:var(--orange);
 }
 
-/* theme button */
 .themeButton{
-background:var(--blue-led);
+background:var(--orange);
 color:white;
 border:none;
 padding:10px 16px;
@@ -74,26 +70,24 @@ border-radius:6px;
 cursor:pointer;
 }
 
-/* hero */
+/* HERO */
 .hero{
 text-align:center;
-padding:90px 20px;
+padding:80px 0;
 }
 
 .hero h1{
+color:var(--orange);
 font-size:42px;
-color:var(--orange-main);
 }
 
-/* CTA button */
 .cta{
-background:var(--orange-main);
+background:var(--orange);
 border:none;
 padding:14px 30px;
 border-radius:8px;
-cursor:pointer;
 color:white;
-font-size:16px;
+cursor:pointer;
 margin-top:20px;
 }
 
@@ -101,48 +95,51 @@ margin-top:20px;
 background:var(--orange-light);
 }
 
-/* services section */
+/* SERVICES */
 .services{
 display:flex;
 justify-content:center;
 gap:30px;
-padding:50px;
+padding:50px 0;
 flex-wrap:wrap;
 }
 
 .card{
 padding:25px;
 border-radius:10px;
-border:1px solid var(--silver);
+border:2px solid var(--silver);
 width:220px;
 text-align:center;
-background:rgba(255,255,255,0.05);
-border-top:6px solid var(--orange-main);
+background:rgba(255,122,26,0.08);
 }
 
 body.light .card{
-background:var(--light-section);
+background:#FFF4EC;
 }
 
-/* blue accent */
+/* BLUE GLOW */
 .blue{
-color:var(--blue-led);
+color:var(--blue);
+text-shadow:
+0 0 8px rgba(62,166,255,0.8),
+0 0 16px rgba(62,166,255,0.6),
+0 0 24px rgba(62,166,255,0.4);
 }
 
-/* footer */
+/* FOOTER */
 footer{
 text-align:center;
-padding:30px;
-border-top:3px solid var(--orange-main);
+padding:30px 0;
+border-top:3px solid var(--orange);
 }
-
 </style>
 </head>
 
 <body>
 
-<header>
+<div class="container">
 
+<header>
 <div class="logo">🦷 Tand<span>Teknik</span></div>
 
 <nav>
@@ -152,22 +149,16 @@ border-top:3px solid var(--orange-main);
 <a href="#">Kontakt</a>
 </nav>
 
-<button class="themeButton" onclick="toggleTheme()">Skift Dark / Light</button>
-
+<button class="themeButton" onclick="toggleTheme()">Skift Theme</button>
 </header>
 
 <section class="hero">
-
-<h1>BB‑8 Inspireret Tandteknik</h1>
-
+<h1>BB-8 Inspireret Tandteknik</h1>
 <p>Moderne løsninger til dit smil</p>
-
 <button class="cta">Book tid</button>
-
 </section>
 
 <section class="services">
-
 <div class="card">
 <h3 class="blue">Kroner</h3>
 <p>Holdbare tandkroner</p>
@@ -182,21 +173,18 @@ border-top:3px solid var(--orange-main);
 <h3 class="blue">Implantater</h3>
 <p>Moderne implantater</p>
 </div>
-
 </section>
 
 <footer>
-
-<p>© Tandtekniker Demo – BB‑8 Theme</p>
-
+<p>© Tandtekniker Demo</p>
 </footer>
 
-<script>
+</div>
 
+<script>
 function toggleTheme(){
 document.body.classList.toggle("light");
 }
-
 </script>
 
 </body>
