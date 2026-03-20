@@ -3,41 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BB-8 Centered Demo</title>
+<title>BB-8 Demo</title>
 
 <style>
 :root{
---orange:#FF7A1A;
---orange-light:#FFB26B;
---blue:#3EA6FF;
---silver:#C0C6CF;
---dark-bg:#0F172A;
---light-bg:#FFFFFF;
---dark-text:#F8FAFC;
---light-text:#1F2933;
+  --orange:#FF7A1A;
+  --orange-light:#FFB26B;
+  --blue:#3EA6FF;
+  --silver:#C0C6CF;
+  --bg:#0F172A;
+  --text:#F8FAFC;
 }
 
 body{
 margin:0;
 font-family:Arial, sans-serif;
-background:var(--dark-bg);
-color:var(--dark-text);
+background:var(--bg);
+color:var(--text);
 transition:0.3s;
 }
 
-body.light{
-background:var(--light-bg);
-color:var(--light-text);
-}
-
-/* CENTERED CONTAINER */
 .container{
 max-width:1100px;
 margin:0 auto;
 padding:0 20px;
 }
 
-/* HEADER */
 header{
 display:flex;
 justify-content:space-between;
@@ -70,7 +61,6 @@ border-radius:6px;
 cursor:pointer;
 }
 
-/* HERO */
 .hero{
 text-align:center;
 padding:80px 0;
@@ -95,7 +85,6 @@ margin-top:20px;
 background:var(--orange-light);
 }
 
-/* SERVICES */
 .services{
 display:flex;
 justify-content:center;
@@ -113,11 +102,6 @@ text-align:center;
 background:rgba(255,122,26,0.08);
 }
 
-body.light .card{
-background:#FFF4EC;
-}
-
-/* BLUE GLOW */
 .blue{
 color:var(--blue);
 text-shadow:
@@ -126,7 +110,6 @@ text-shadow:
 0 0 24px rgba(62,166,255,0.4);
 }
 
-/* FOOTER */
 footer{
 text-align:center;
 padding:30px 0;
@@ -149,7 +132,8 @@ border-top:3px solid var(--orange);
 <a href="#">Kontakt</a>
 </nav>
 
-<button class="themeButton" onclick="toggleTheme()">Skift Theme</button>
+<select id="themeSelect"></select>
+<button class="themeButton" onclick="toggleMode()">Dark/Light</button>
 </header>
 
 <section class="hero">
@@ -181,10 +165,43 @@ border-top:3px solid var(--orange);
 
 </div>
 
+<script src="themes.js"></script>
+
 <script>
-function toggleTheme(){
-document.body.classList.toggle("light");
+const select = document.getElementById("themeSelect");
+
+let currentTheme = "bb8";
+let currentMode = "dark";
+
+// 🔽 Lav dropdown automatisk
+for (const key in themes) {
+  const option = document.createElement("option");
+  option.value = key;
+  option.textContent = themes[key].name;
+  select.appendChild(option);
 }
+
+// 🎨 Apply theme
+function applyTheme() {
+  const theme = themes[currentTheme][currentMode];
+
+  for (const variable in theme) {
+    document.documentElement.style.setProperty(variable, theme[variable]);
+  }
+}
+
+select.addEventListener("change", () => {
+  currentTheme = select.value;
+  applyTheme();
+});
+
+function toggleMode(){
+  currentMode = currentMode === "dark" ? "light" : "dark";
+  applyTheme();
+}
+
+// start
+applyTheme();
 </script>
 
 </body>
