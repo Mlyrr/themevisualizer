@@ -174,7 +174,7 @@ let currentTheme = "bb8";
 let currentMode = "dark";
 
 // 🔽 Lav dropdown automatisk
-for (const key in window_themes) {
+for (const key in themes) {
   const option = document.createElement("option");
   option.value = key;
   option.textContent = themes[key].name;
@@ -183,7 +183,7 @@ for (const key in window_themes) {
 
 // 🎨 Apply theme
 function applyTheme() {
- const theme = window_themes[currentTheme][currentMode];
+  const theme = themes[currentTheme][currentMode];
 
   for (const variable in theme) {
     document.documentElement.style.setProperty(variable, theme[variable]);
