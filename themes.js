@@ -19,21 +19,22 @@ const themes = {
     }
   },
 
+  window_themes = {
   cherry_breeze: {
     name: "Cherry Breeze",
     light: {
-      "--cherry": "#D7263D",        // cherry rød
-      "--cherry-soft": "#F28B9A",   // lys cherry
-      "--blue": "#7EC8E3",          // lys blå
-      "--green": "#6FCF97",         // frisk grøn
+      "--cherry": "#D7263D",
+      "--cherry-soft": "#F28B9A",
+      "--blue": "#7EC8E3",
+      "--green": "#6FCF97",
       "--bg": "#FFFFFF",
       "--text": "#1F2933"
     },
     dark: {
-      "--cherry": "#FF4D6D",        // lidt lysere i dark mode
+      "--cherry": "#FF4D6D",
       "--cherry-soft": "#FF8FA3",
-      "--blue": "#4DA3C7",          // dæmpet blå
-      "--green": "#4CAF7A",         // mørkere grøn
+      "--blue": "#4DA3C7",
+      "--green": "#4CAF7A",
       "--bg": "#0B1220",
       "--text": "#F1F5F9"
     }
