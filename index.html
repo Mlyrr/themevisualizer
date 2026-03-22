@@ -52,13 +52,6 @@ nav a:hover{
 color:var(--orange);
 }
 
-/* 🔥 lille fix så dropdown er synlig */
-#themeSelect{
-padding:8px;
-margin-left:20px;
-border-radius:6px;
-}
-
 .themeButton{
 background:var(--orange);
 color:white;
@@ -172,7 +165,6 @@ border-top:3px solid var(--orange);
 
 </div>
 
-<!-- 🔥 behold din themes.js -->
 <script src="themes.js"></script>
 
 <script>
@@ -181,33 +173,28 @@ const select = document.getElementById("themeSelect");
 let currentTheme = "bb8";
 let currentMode = "dark";
 
-// 🔥 vigtig fix: brug window.themes
-for (const key in window.themes) {
+// 🔽 Lav dropdown automatisk
+for (const key in themes) {
   const option = document.createElement("option");
   option.value = key;
-  option.textContent = window.themes[key].name;
+  option.textContent = themes[key].name;
   select.appendChild(option);
 }
 
-// sæt default value
-select.value = currentTheme;
-
-// apply theme
+// 🎨 Apply theme
 function applyTheme() {
-  const theme = window.themes[currentTheme][currentMode];
+  const theme = themes[currentTheme][currentMode];
 
   for (const variable in theme) {
     document.documentElement.style.setProperty(variable, theme[variable]);
   }
 }
 
-// skift theme
 select.addEventListener("change", () => {
   currentTheme = select.value;
   applyTheme();
 });
 
-// dark/light
 function toggleMode(){
   currentMode = currentMode === "dark" ? "light" : "dark";
   applyTheme();
