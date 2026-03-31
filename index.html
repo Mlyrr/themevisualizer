@@ -185,19 +185,23 @@ for (const key in themes) {
 function applyTheme() {
   const theme = themes[currentTheme][currentMode];
 
-  for (const variable in theme) {
-    document.documentElement.style.setProperty(variable, theme[variable]);
+  // map cherry → standard variabler
+  const mappedTheme = {};
+
+  for (const key in theme) {
+    let newKey = key;
+
+    if (key === "--cherry") newKey = "--orange";
+    if (key === "--cherry-soft") newKey = "--orange-light";
+    if (key === "--green") newKey = "--silver";
+
+    mappedTheme[newKey] = theme[key];
   }
-}
 
-select.addEventListener("change", () => {
-  currentTheme = select.value;
-  applyTheme();
-});
-
-function toggleMode(){
-  currentMode = currentMode === "dark" ? "light" : "dark";
-  applyTheme();
+  // apply
+  for (const variable in mappedTheme) {
+    document.documentElement.style.setProperty(variable, mappedTheme[variable]);
+  }
 }
 
 // start
