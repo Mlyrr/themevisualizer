@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Theme Demo</title>
+<title>TandTeknik Demo</title>
 
 <style>
 :root{
@@ -110,6 +110,18 @@ text-shadow:
 0 0 24px rgba(62,166,255,0.4);
 }
 
+.about, .contact{
+padding:50px 0;
+text-align:center;
+max-width:700px;
+margin:0 auto;
+}
+
+.about h2, .contact h2{
+color:var(--orange);
+margin-bottom:15px;
+}
+
 footer{
 text-align:center;
 padding:30px 0;
@@ -136,31 +148,61 @@ border-top:3px solid var(--orange);
 <button class="themeButton" onclick="toggleMode()">Dark/Light</button>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-<h1>Theme Demo</h1>
-<p>Skift farver live</p>
-<button class="cta">Book tid</button>
+<h1>Professionel Tandteknik i Topkvalitet</h1>
+<p>Vi skaber smukke og holdbare løsninger til dit smil – med moderne teknologi og personlig service.</p>
+<button class="cta">Book tid i dag</button>
 </section>
 
+<!-- OM OS -->
+<section class="about">
+<h2>Om os</h2>
+<p>
+Hos TandTeknik arbejder vi med de nyeste teknologier inden for tandproteser, kroner og implantater.
+Vi lægger stor vægt på kvalitet, komfort og et naturligt resultat.
+</p>
+
+<p>
+Vores mål er at give dig et smil, du kan være stolt af – samtidig med at behandlingen er tryg og professionel.
+</p>
+</section>
+
+<!-- SERVICES -->
 <section class="services">
 <div class="card">
 <h3 class="blue">Kroner</h3>
-<p>Holdbare tandkroner</p>
+<p>Stærke og naturlige tandkroner i høj kvalitet.</p>
 </div>
 
 <div class="card">
 <h3 class="blue">Proteser</h3>
-<p>Komfortable proteser</p>
+<p>Komfortable løsninger tilpasset dine behov.</p>
 </div>
 
 <div class="card">
 <h3 class="blue">Implantater</h3>
-<p>Moderne implantater</p>
+<p>Permanent løsning med moderne teknologi.</p>
+</div>
+
+<div class="card">
+<h3 class="blue">Reparation</h3>
+<p>Hurtig reparation af ødelagte proteser.</p>
 </div>
 </section>
 
+<!-- KONTAKT -->
+<section class="contact">
+<h2>Kontakt os</h2>
+<p>📍 Adresse: Eksempelvej 12, 4600 Køge</p>
+<p>📞 Telefon: 12 34 56 78</p>
+<p>✉️ Email: kontakt@tandteknik.dk</p>
+
+<button class="cta">Bestil tid</button>
+</section>
+
 <footer>
-<p>© Demo</p>
+<p>© Tandtekniker Demo</p>
 </footer>
 
 </div>
