@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BB-8 Demo</title>
+<title>Theme Demo</title>
 
 <style>
 :root{
@@ -137,8 +137,8 @@ border-top:3px solid var(--orange);
 </header>
 
 <section class="hero">
-<h1>BB-8 Inspireret Tandteknik</h1>
-<p>Moderne løsninger til dit smil</p>
+<h1>Theme Demo</h1>
+<p>Skift farver live</p>
 <button class="cta">Book tid</button>
 </section>
 
@@ -160,7 +160,7 @@ border-top:3px solid var(--orange);
 </section>
 
 <footer>
-<p>© Tandtekniker Demo</p>
+<p>© Demo</p>
 </footer>
 
 </div>
@@ -173,7 +173,7 @@ const select = document.getElementById("themeSelect");
 let currentTheme = "bb8";
 let currentMode = "dark";
 
-// 🔽 Lav dropdown automatisk
+// dropdown
 for (const key in themes) {
   const option = document.createElement("option");
   option.value = key;
@@ -181,27 +181,39 @@ for (const key in themes) {
   select.appendChild(option);
 }
 
-// 🎨 Apply theme
+// mapping
+function mapTheme(theme) {
+  const mapped = { ...theme };
+
+  if (currentTheme === "cherry_breeze") {
+    if (theme["--cherry"]) mapped["--orange"] = theme["--cherry"];
+    if (theme["--cherry-soft"]) mapped["--orange-light"] = theme["--cherry-soft"];
+    if (theme["--green"]) mapped["--silver"] = theme["--green"];
+  }
+
+  return mapped;
+}
+
+// apply
 function applyTheme() {
-  const theme = themes[currentTheme][currentMode];
+  const rawTheme = themes[currentTheme][currentMode];
+  const theme = mapTheme(rawTheme);
 
-  // map cherry → standard variabler
-  const mappedTheme = {};
-
-  for (const key in theme) {
-    let newKey = key;
-
-    if (key === "--cherry") newKey = "--orange";
-    if (key === "--cherry-soft") newKey = "--orange-light";
-    if (key === "--green") newKey = "--silver";
-
-    mappedTheme[newKey] = theme[key];
+  for (const variable in theme) {
+    document.documentElement.style.setProperty(variable, theme[variable]);
   }
+}
 
-  // apply
-  for (const variable in mappedTheme) {
-    document.documentElement.style.setProperty(variable, mappedTheme[variable]);
-  }
+// skift theme
+select.addEventListener("change", () => {
+  currentTheme = select.value;
+  applyTheme();
+});
+
+// dark/light
+function toggleMode() {
+  currentMode = currentMode === "dark" ? "light" : "dark";
+  applyTheme();
 }
 
 // start
