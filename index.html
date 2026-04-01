@@ -122,6 +122,39 @@ color:var(--orange);
 margin-bottom:15px;
 }
 
+/* CHECKBOX SECTION */
+.options{
+text-align:center;
+padding:50px 0;
+}
+
+.checkboxes{
+display:flex;
+flex-direction:column;
+gap:12px;
+align-items:center;
+margin-top:20px;
+}
+
+.checkboxes label{
+background:rgba(255,255,255,0.05);
+padding:10px 15px;
+border-radius:8px;
+cursor:pointer;
+border:1px solid var(--silver);
+width:250px;
+text-align:left;
+transition:0.2s;
+}
+
+.checkboxes label:hover{
+border-color:var(--orange);
+}
+
+.checkboxes input{
+margin-right:10px;
+}
+
 footer{
 text-align:center;
 padding:30px 0;
@@ -157,14 +190,17 @@ border-top:3px solid var(--orange);
 
 <!-- OM OS -->
 <section class="about">
-<h2>Om os</h2>
+<h2>Din lokale tandtekniker</h2>
+
 <p>
-Hos TandTeknik arbejder vi med de nyeste teknologier inden for tandproteser, kroner og implantater.
-Vi lægger stor vægt på kvalitet, komfort og et naturligt resultat.
+Hos TandTeknik tilbyder vi moderne og holdbare løsninger inden for tandproteser,
+kroner og implantater. Vi kombinerer høj faglighed med personlig service,
+så du altid føler dig tryg gennem hele forløbet.
 </p>
 
 <p>
-Vores mål er at give dig et smil, du kan være stolt af – samtidig med at behandlingen er tryg og professionel.
+Uanset om du har brug for en ny løsning eller reparation,
+står vi klar til at hjælpe dig med et smil, der både ser godt ud og føles naturligt.
 </p>
 </section>
 
@@ -189,6 +225,21 @@ Vores mål er at give dig et smil, du kan være stolt af – samtidig med at beh
 <h3 class="blue">Reparation</h3>
 <p>Hurtig reparation af ødelagte proteser.</p>
 </div>
+</section>
+
+<!-- CHECKBOX -->
+<section class="options">
+<h2>Hvad har du brug for?</h2>
+
+<form class="checkboxes">
+<label><input type="checkbox"> Tandkroner</label>
+<label><input type="checkbox"> Proteser</label>
+<label><input type="checkbox"> Implantater</label>
+<label><input type="checkbox"> Reparation</label>
+<label><input type="checkbox"> Rådgivning</label>
+
+<button class="cta" type="button">Få et tilbud</button>
+</form>
 </section>
 
 <!-- KONTAKT -->
@@ -223,7 +274,7 @@ for (const key in themes) {
   select.appendChild(option);
 }
 
-// mapping
+// mapping (så cherry virker)
 function mapTheme(theme) {
   const mapped = { ...theme };
 
