@@ -49,9 +49,7 @@ padding:20px 0;
 border-bottom:3px solid var(--orange);
 }
 
-.logo span{
-color:var(--orange);
-}
+.logo span{ color:var(--orange); }
 
 nav a{
 margin-left:20px;
@@ -60,9 +58,7 @@ color:inherit;
 font-weight:600;
 }
 
-nav a:hover{
-color:var(--orange);
-}
+nav a:hover{ color:var(--orange); }
 
 .themeButton{
 background:var(--orange);
@@ -93,9 +89,7 @@ cursor:pointer;
 margin-top:20px;
 }
 
-.cta:hover{
-background:var(--orange-light);
-}
+.cta:hover{ background:var(--orange-light); }
 
 .services{
 display:flex;
@@ -134,7 +128,7 @@ color:var(--orange);
 margin-bottom:15px;
 }
 
-/* OPTIONS (NY VERSION) */
+/* 🔥 SINGLE CHOICE OPTIONS */
 .options{
 text-align:center;
 padding:50px 0;
@@ -195,48 +189,37 @@ border-top:3px solid var(--orange);
 
 <section class="hero">
 <h1>Professionel Tandteknik i Topkvalitet</h1>
-<p>Vi skaber smukke og holdbare løsninger til dit smil – med moderne teknologi og personlig service.</p>
-<button class="cta">Book tid i dag</button>
-</section>
-
-<section class="about">
-<h2>Din lokale tandtekniker</h2>
-<p>Hos TandTeknik tilbyder vi moderne og holdbare løsninger inden for tandproteser, kroner og implantater.</p>
-<p>Vi kombinerer høj faglighed med personlig service.</p>
+<p>Vi skaber smukke og holdbare løsninger til dit smil.</p>
+<button class="cta">Book tid</button>
 </section>
 
 <section class="services">
-<div class="card"><h3 class="blue">Kroner</h3><p>Stærke løsninger.</p></div>
-<div class="card"><h3 class="blue">Proteser</h3><p>Komfortable løsninger.</p></div>
-<div class="card"><h3 class="blue">Implantater</h3><p>Permanent løsning.</p></div>
-<div class="card"><h3 class="blue">Reparation</h3><p>Hurtig service.</p></div>
+<div class="card"><h3 class="blue">Kroner</h3></div>
+<div class="card"><h3 class="blue">Proteser</h3></div>
+<div class="card"><h3 class="blue">Implantater</h3></div>
 </section>
 
-<!-- 🔥 NY OPTIONS -->
+<!-- 🔥 SINGLE SELECT -->
 <section class="options">
-<h2>Hvad har du brug for?</h2>
+<h2>Vælg behandling</h2>
 
 <div class="option-grid">
-  <div class="option" onclick="toggleOption(this)">Kroner</div>
-  <div class="option" onclick="toggleOption(this)">Proteser</div>
-  <div class="option" onclick="toggleOption(this)">Implantater</div>
-  <div class="option" onclick="toggleOption(this)">Reparation</div>
-  <div class="option" onclick="toggleOption(this)">Rådgivning</div>
+  <div class="option" onclick="selectOne(this)">Kroner</div>
+  <div class="option" onclick="selectOne(this)">Proteser</div>
+  <div class="option" onclick="selectOne(this)">Implantater</div>
+  <div class="option" onclick="selectOne(this)">Reparation</div>
 </div>
 
 <button class="cta" onclick="calculatePrice()">Få pris</button>
 </section>
 
 <section class="contact">
-<h2>Kontakt os</h2>
-<p>📍 Adresse: Eksempelvej 12, 4600 Køge</p>
-<p>📞 Telefon: 12 34 56 78</p>
-<p>✉️ Email: kontakt@tandteknik.dk</p>
-<button class="cta">Bestil tid</button>
+<h2>Kontakt</h2>
+<p>📞 12 34 56 78</p>
 </section>
 
 <footer>
-<p>© Tandtekniker Demo</p>
+<p>© Demo</p>
 </footer>
 
 </div>
@@ -288,15 +271,20 @@ function toggleMode() {
   applyTheme();
 }
 
-// 🔥 option klik
-function toggleOption(el){
-  el.classList.toggle("active");
+// 🔥 KUN ÉN VALGT
+function selectOne(el){
+  document.querySelectorAll(".option").forEach(o => o.classList.remove("active"));
+  el.classList.add("active");
 }
 
-// 🔥 fake pris
+// 🔥 PRIS
 function calculatePrice(){
-  const selected = document.querySelectorAll(".option.active").length;
-  alert("Estimeret pris: " + (selected * 1500) + " kr");
+  const selected = document.querySelector(".option.active");
+  if(!selected){
+    alert("Vælg en behandling først");
+    return;
+  }
+  alert("Pris for " + selected.textContent + ": ca. 1500 kr");
 }
 
 applyTheme();
