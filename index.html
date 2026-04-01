@@ -15,11 +15,26 @@
   --text:#F8FAFC;
 }
 
+/* 🔥 NY: baggrund + centering */
 body{
 margin:0;
 font-family:Arial, sans-serif;
-background:var(--bg);
+background:linear-gradient(135deg, var(--bg), #020617);
 color:var(--text);
+display:flex;
+justify-content:center;
+padding:30px;
+}
+
+/* 🔥 NY: border wrapper */
+.wrapper{
+width:100%;
+max-width:1200px;
+border:3px solid var(--orange);
+border-radius:16px;
+background:var(--bg);
+box-shadow:0 0 25px rgba(0,0,0,0.4);
+overflow:hidden;
 transition:0.3s;
 }
 
@@ -122,7 +137,7 @@ color:var(--orange);
 margin-bottom:15px;
 }
 
-/* CHECKBOX SECTION */
+/* CHECKBOX */
 .options{
 text-align:center;
 padding:50px 0;
@@ -165,6 +180,7 @@ border-top:3px solid var(--orange);
 
 <body>
 
+<div class="wrapper">
 <div class="container">
 
 <header>
@@ -181,74 +197,42 @@ border-top:3px solid var(--orange);
 <button class="themeButton" onclick="toggleMode()">Dark/Light</button>
 </header>
 
-<!-- HERO -->
 <section class="hero">
 <h1>Professionel Tandteknik i Topkvalitet</h1>
 <p>Vi skaber smukke og holdbare løsninger til dit smil – med moderne teknologi og personlig service.</p>
 <button class="cta">Book tid i dag</button>
 </section>
 
-<!-- OM OS -->
 <section class="about">
 <h2>Din lokale tandtekniker</h2>
-
-<p>
-Hos TandTeknik tilbyder vi moderne og holdbare løsninger inden for tandproteser,
-kroner og implantater. Vi kombinerer høj faglighed med personlig service,
-så du altid føler dig tryg gennem hele forløbet.
-</p>
-
-<p>
-Uanset om du har brug for en ny løsning eller reparation,
-står vi klar til at hjælpe dig med et smil, der både ser godt ud og føles naturligt.
-</p>
+<p>Hos TandTeknik tilbyder vi moderne og holdbare løsninger inden for tandproteser, kroner og implantater.</p>
+<p>Vi kombinerer høj faglighed med personlig service, så du altid føler dig tryg.</p>
 </section>
 
-<!-- SERVICES -->
 <section class="services">
-<div class="card">
-<h3 class="blue">Kroner</h3>
-<p>Stærke og naturlige tandkroner i høj kvalitet.</p>
-</div>
-
-<div class="card">
-<h3 class="blue">Proteser</h3>
-<p>Komfortable løsninger tilpasset dine behov.</p>
-</div>
-
-<div class="card">
-<h3 class="blue">Implantater</h3>
-<p>Permanent løsning med moderne teknologi.</p>
-</div>
-
-<div class="card">
-<h3 class="blue">Reparation</h3>
-<p>Hurtig reparation af ødelagte proteser.</p>
-</div>
+<div class="card"><h3 class="blue">Kroner</h3><p>Stærke og naturlige tandkroner.</p></div>
+<div class="card"><h3 class="blue">Proteser</h3><p>Komfortable løsninger.</p></div>
+<div class="card"><h3 class="blue">Implantater</h3><p>Permanent løsning.</p></div>
+<div class="card"><h3 class="blue">Reparation</h3><p>Hurtig service.</p></div>
 </section>
 
-<!-- CHECKBOX -->
 <section class="options">
 <h2>Hvad har du brug for?</h2>
-
 <form class="checkboxes">
 <label><input type="checkbox"> Tandkroner</label>
 <label><input type="checkbox"> Proteser</label>
 <label><input type="checkbox"> Implantater</label>
 <label><input type="checkbox"> Reparation</label>
 <label><input type="checkbox"> Rådgivning</label>
-
 <button class="cta" type="button">Få et tilbud</button>
 </form>
 </section>
 
-<!-- KONTAKT -->
 <section class="contact">
 <h2>Kontakt os</h2>
 <p>📍 Adresse: Eksempelvej 12, 4600 Køge</p>
 <p>📞 Telefon: 12 34 56 78</p>
 <p>✉️ Email: kontakt@tandteknik.dk</p>
-
 <button class="cta">Bestil tid</button>
 </section>
 
@@ -256,6 +240,7 @@ står vi klar til at hjælpe dig med et smil, der både ser godt ud og føles na
 <p>© Tandtekniker Demo</p>
 </footer>
 
+</div>
 </div>
 
 <script src="themes.js"></script>
@@ -266,7 +251,6 @@ const select = document.getElementById("themeSelect");
 let currentTheme = "bb8";
 let currentMode = "dark";
 
-// dropdown
 for (const key in themes) {
   const option = document.createElement("option");
   option.value = key;
@@ -274,7 +258,6 @@ for (const key in themes) {
   select.appendChild(option);
 }
 
-// mapping (så cherry virker)
 function mapTheme(theme) {
   const mapped = { ...theme };
 
@@ -287,7 +270,6 @@ function mapTheme(theme) {
   return mapped;
 }
 
-// apply
 function applyTheme() {
   const rawTheme = themes[currentTheme][currentMode];
   const theme = mapTheme(rawTheme);
@@ -297,19 +279,16 @@ function applyTheme() {
   }
 }
 
-// skift theme
 select.addEventListener("change", () => {
   currentTheme = select.value;
   applyTheme();
 });
 
-// dark/light
 function toggleMode() {
   currentMode = currentMode === "dark" ? "light" : "dark";
   applyTheme();
 }
 
-// start
 applyTheme();
 </script>
 
