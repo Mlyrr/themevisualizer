@@ -15,7 +15,6 @@
   --text:#F8FAFC;
 }
 
-/* 🔥 NY: baggrund + centering */
 body{
 margin:0;
 font-family:Arial, sans-serif;
@@ -26,7 +25,6 @@ justify-content:center;
 padding:30px;
 }
 
-/* 🔥 NY: border wrapper */
 .wrapper{
 width:100%;
 max-width:1200px;
@@ -35,7 +33,6 @@ border-radius:16px;
 background:var(--bg);
 box-shadow:0 0 25px rgba(0,0,0,0.4);
 overflow:hidden;
-transition:0.3s;
 }
 
 .container{
@@ -137,37 +134,36 @@ color:var(--orange);
 margin-bottom:15px;
 }
 
-/* CHECKBOX */
+/* OPTIONS (NY VERSION) */
 .options{
 text-align:center;
 padding:50px 0;
 }
 
-.checkboxes{
+.option-grid{
 display:flex;
-flex-direction:column;
-gap:12px;
-align-items:center;
+flex-wrap:wrap;
+gap:15px;
+justify-content:center;
 margin-top:20px;
 }
 
-.checkboxes label{
-background:rgba(255,255,255,0.05);
-padding:10px 15px;
-border-radius:8px;
+.option{
+padding:15px 25px;
+border:2px solid var(--silver);
+border-radius:10px;
 cursor:pointer;
-border:1px solid var(--silver);
-width:250px;
-text-align:left;
 transition:0.2s;
 }
 
-.checkboxes label:hover{
+.option:hover{
 border-color:var(--orange);
 }
 
-.checkboxes input{
-margin-right:10px;
+.option.active{
+background:var(--orange);
+color:white;
+border-color:var(--orange);
 }
 
 footer{
@@ -206,26 +202,29 @@ border-top:3px solid var(--orange);
 <section class="about">
 <h2>Din lokale tandtekniker</h2>
 <p>Hos TandTeknik tilbyder vi moderne og holdbare løsninger inden for tandproteser, kroner og implantater.</p>
-<p>Vi kombinerer høj faglighed med personlig service, så du altid føler dig tryg.</p>
+<p>Vi kombinerer høj faglighed med personlig service.</p>
 </section>
 
 <section class="services">
-<div class="card"><h3 class="blue">Kroner</h3><p>Stærke og naturlige tandkroner.</p></div>
+<div class="card"><h3 class="blue">Kroner</h3><p>Stærke løsninger.</p></div>
 <div class="card"><h3 class="blue">Proteser</h3><p>Komfortable løsninger.</p></div>
 <div class="card"><h3 class="blue">Implantater</h3><p>Permanent løsning.</p></div>
 <div class="card"><h3 class="blue">Reparation</h3><p>Hurtig service.</p></div>
 </section>
 
+<!-- 🔥 NY OPTIONS -->
 <section class="options">
 <h2>Hvad har du brug for?</h2>
-<form class="checkboxes">
-<label><input type="checkbox"> Tandkroner</label>
-<label><input type="checkbox"> Proteser</label>
-<label><input type="checkbox"> Implantater</label>
-<label><input type="checkbox"> Reparation</label>
-<label><input type="checkbox"> Rådgivning</label>
-<button class="cta" type="button">Få et tilbud</button>
-</form>
+
+<div class="option-grid">
+  <div class="option" onclick="toggleOption(this)">Kroner</div>
+  <div class="option" onclick="toggleOption(this)">Proteser</div>
+  <div class="option" onclick="toggleOption(this)">Implantater</div>
+  <div class="option" onclick="toggleOption(this)">Reparation</div>
+  <div class="option" onclick="toggleOption(this)">Rådgivning</div>
+</div>
+
+<button class="cta" onclick="calculatePrice()">Få pris</button>
 </section>
 
 <section class="contact">
@@ -287,6 +286,17 @@ select.addEventListener("change", () => {
 function toggleMode() {
   currentMode = currentMode === "dark" ? "light" : "dark";
   applyTheme();
+}
+
+// 🔥 option klik
+function toggleOption(el){
+  el.classList.toggle("active");
+}
+
+// 🔥 fake pris
+function calculatePrice(){
+  const selected = document.querySelectorAll(".option.active").length;
+  alert("Estimeret pris: " + (selected * 1500) + " kr");
 }
 
 applyTheme();
