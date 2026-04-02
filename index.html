@@ -157,7 +157,7 @@ gap:10px;
 border-color:var(--orange);
 }
 
-/* 🔥 ALLE CHECKBOXES SAMME */
+/* 🔥 ALLE CHECKBOXES ENS */
 .check{
   accent-color: var(--orange);
 }
@@ -240,8 +240,9 @@ border-top:3px solid var(--orange);
 </div>
 
 <h3>Tilføj ekstra (valgfrit)</h3>
-<div class="option-grid">
 
+<!-- eksisterende -->
+<div class="option-grid">
   <label class="option">
     <input type="checkbox" class="check" value="Rensning">
     Rensning
@@ -256,7 +257,24 @@ border-top:3px solid var(--orange);
     <input type="checkbox" class="check" value="Ekstra kontrol">
     Ekstra kontrol
   </label>
+</div>
 
+<!-- NY RÆKKE -->
+<div class="option-grid">
+  <label class="option">
+    <input type="checkbox" class="check" value="Bedøvelse">
+    Bedøvelse
+  </label>
+
+  <label class="option">
+    <input type="checkbox" class="check" value="Polering">
+    Polering
+  </label>
+
+  <label class="option">
+    <input type="checkbox" class="check" value="Tjek">
+    Tjek
+  </label>
 </div>
 
 <button class="cta" onclick="calculatePrice()">Få pris</button>
