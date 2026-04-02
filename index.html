@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="da">
 <head>
 <meta charset="UTF-8">
@@ -7,10 +8,10 @@
 
 <style>
 :root{
-  --orange:#FF7A1A;
-  --orange-light:#FFB26B;
-  --blue:#3EA6FF;
-  --silver:#C0C6CF;
+  --primary:#FF7A1A;
+  --primary-light:#FFB26B;
+  --accent:#3EA6FF;
+  --neutral:#C0C6CF;
   --bg:#0F172A;
   --text:#F8FAFC;
 }
@@ -28,7 +29,7 @@ padding:30px;
 .wrapper{
 width:100%;
 max-width:1200px;
-border:3px solid var(--orange);
+border:3px solid var(--primary);
 border-radius:16px;
 background:var(--bg);
 box-shadow:0 0 25px rgba(0,0,0,0.4);
@@ -46,10 +47,10 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:20px 0;
-border-bottom:3px solid var(--orange);
+border-bottom:3px solid var(--primary);
 }
 
-.logo span{ color:var(--orange); }
+.logo span{ color:var(--primary); }
 
 nav a{
 margin-left:20px;
@@ -58,10 +59,10 @@ color:inherit;
 font-weight:600;
 }
 
-nav a:hover{ color:var(--orange); }
+nav a:hover{ color:var(--primary); }
 
 .themeButton{
-background:var(--orange);
+background:var(--primary);
 color:white;
 border:none;
 padding:10px 16px;
@@ -75,12 +76,12 @@ padding:80px 0;
 }
 
 .hero h1{
-color:var(--orange);
+color:var(--primary);
 font-size:42px;
 }
 
 .cta{
-background:var(--orange);
+background:var(--primary);
 border:none;
 padding:14px 30px;
 border-radius:8px;
@@ -89,7 +90,7 @@ cursor:pointer;
 margin-top:20px;
 }
 
-.cta:hover{ background:var(--orange-light); }
+.cta:hover{ background:var(--primary-light); }
 
 .services{
 display:flex;
@@ -102,14 +103,14 @@ flex-wrap:wrap;
 .card{
 padding:25px;
 border-radius:10px;
-border:2px solid var(--silver);
+border:2px solid var(--neutral);
 width:220px;
 text-align:center;
 background:rgba(255,122,26,0.08);
 }
 
 .blue{
-color:var(--blue);
+color:var(--accent);
 text-shadow:
 0 0 8px rgba(62,166,255,0.8),
 0 0 16px rgba(62,166,255,0.6),
@@ -124,11 +125,10 @@ margin:0 auto;
 }
 
 .about h2, .contact h2{
-color:var(--orange);
+color:var(--primary);
 margin-bottom:15px;
 }
 
-/* OPTIONS */
 .options{
 text-align:center;
 padding:50px 0;
@@ -144,7 +144,7 @@ margin-top:20px;
 
 .option{
 padding:15px 25px;
-border:none; /* 👈 ingen border rundt om boksen */
+border:none;
 border-radius:10px;
 cursor:pointer;
 transition:0.2s;
@@ -157,25 +157,21 @@ gap:10px;
 background: rgba(255,122,26,0.15);
 }
 
-/* ✅ CHECKBOXES + RADIO (med border igen) */
 .check,
 input[type="radio"]{
   appearance: none;
-  -webkit-appearance: none;
   width: 18px;
   height: 18px;
-  border: 2px solid var(--silver); /* 👈 border tilbage */
-  outline: none;
+  border: 2px solid var(--neutral);
   background: transparent;
   border-radius: 4px;
   cursor: pointer;
   position: relative;
 }
 
-/* checkbox checked */
 .check:checked{
-  background: var(--orange);
-  border-color: var(--orange);
+  background: var(--primary);
+  border-color: var(--primary);
 }
 
 .check:checked::after{
@@ -187,13 +183,12 @@ input[type="radio"]{
   color: white;
 }
 
-/* radio */
 input[type="radio"]{
   border-radius: 50%;
 }
 
 input[type="radio"]:checked{
-  border-color: var(--orange);
+  border-color: var(--primary);
 }
 
 input[type="radio"]:checked::after{
@@ -203,11 +198,10 @@ input[type="radio"]:checked::after{
   left: 4px;
   width: 8px;
   height: 8px;
-  background: var(--orange);
+  background: var(--primary);
   border-radius: 50%;
 }
 
-/* lilla række */
 .purple-row .check{
   border-color: purple;
 }
@@ -219,9 +213,10 @@ input[type="radio"]:checked::after{
 footer{
 text-align:center;
 padding:30px 0;
-border-top:3px solid var(--orange);
+border-top:3px solid var(--primary);
 }
 </style>
+
 </head>
 
 <body>
@@ -239,8 +234,8 @@ border-top:3px solid var(--orange);
 <a href="#">Kontakt</a>
 </nav>
 
-<select id="themeSelect"></select>
-<button class="themeButton" onclick="toggleMode()">Dark/Light</button>
+<select id="themeSelect"></select> <button class="themeButton" onclick="toggleMode()">Dark/Light</button>
+
 </header>
 
 <section class="hero">
@@ -257,11 +252,9 @@ border-top:3px solid var(--orange);
 
 <section class="about">
 <h2>Om os</h2>
-
 <p>
-Hos TandTeknik fokuserer vi på kvalitet, præcision og moderne løsninger. Vi arbejder med de nyeste teknologier for at sikre et naturligt og holdbart resultat. Vores erfarne tandteknikere samarbejder tæt med både tandlæger og patienter for at skabe individuelle løsninger, der passer perfekt til dine behov. Vi tilbyder alt fra kroner og broer til proteser og implantater, altid med fokus på komfort og æstetik. Hos os er dit smil i centrum, og vi stræber efter at give dig tryghed gennem hele processen – fra første konsultation til færdigt resultat. Har du spørgsmål eller ønsker du rådgivning, er du altid velkommen til at kontakte os – vi står klar til at hjælpe dig.
+Hos TandTeknik fokuserer vi på kvalitet, præcision og moderne løsninger...
 </p>
-
 </section>
 
 <section class="options">
@@ -269,61 +262,26 @@ Hos TandTeknik fokuserer vi på kvalitet, præcision og moderne løsninger. Vi a
 
 <h3>Vælg én behandling</h3>
 <div class="option-grid">
-
-  <label class="option">
-    <input type="radio" name="single" value="Kroner">
-    Kroner
-  </label>
-
-  <label class="option">
-    <input type="radio" name="single" value="Proteser">
-    Proteser
-  </label>
-
-  <label class="option">
-    <input type="radio" name="single" value="Implantater">
-    Implantater
-  </label>
-
+<label class="option"><input type="radio" name="single" value="Kroner"> Kroner</label>
+<label class="option"><input type="radio" name="single" value="Proteser"> Proteser</label>
+<label class="option"><input type="radio" name="single" value="Implantater"> Implantater</label>
 </div>
 
-<h3>Tilføj ekstra (valgfrit)</h3>
-
+<h3>Tilføj ekstra</h3>
 <div class="option-grid">
-  <label class="option">
-    <input type="checkbox" class="check" value="Rensning">
-    Rensning
-  </label>
-
-  <label class="option">
-    <input type="checkbox" class="check" value="Justering">
-    Justering
-  </label>
-
-  <label class="option">
-    <input type="checkbox" class="check" value="Ekstra kontrol">
-    Ekstra kontrol
-  </label>
+<label class="option"><input type="checkbox" class="check" value="Rensning"> Rensning</label>
+<label class="option"><input type="checkbox" class="check" value="Justering"> Justering</label>
+<label class="option"><input type="checkbox" class="check" value="Ekstra kontrol"> Ekstra kontrol</label>
 </div>
 
 <div class="option-grid purple-row">
-  <label class="option">
-    <input type="checkbox" class="check" value="Bedøvelse">
-    Bedøvelse
-  </label>
-
-  <label class="option">
-    <input type="checkbox" class="check" value="Polering">
-    Polering
-  </label>
-
-  <label class="option">
-    <input type="checkbox" class="check" value="Tjek">
-    Tjek
-  </label>
+<label class="option"><input type="checkbox" class="check" value="Bedøvelse"> Bedøvelse</label>
+<label class="option"><input type="checkbox" class="check" value="Polering"> Polering</label>
+<label class="option"><input type="checkbox" class="check" value="Tjek"> Tjek</label>
 </div>
 
 <button class="cta" onclick="calculatePrice()">Få pris</button>
+
 </section>
 
 <section class="contact">
@@ -353,22 +311,8 @@ for (const key in themes) {
   select.appendChild(option);
 }
 
-function mapTheme(theme) {
-  const mapped = { ...theme };
-
-  if (currentTheme === "cherry_breeze") {
-    if (theme["--cherry"]) mapped["--orange"] = theme["--cherry"];
-    if (theme["--cherry-soft"]) mapped["--orange-light"] = theme["--cherry-soft"];
-    if (theme["--green"]) mapped["--silver"] = theme["--green"];
-  }
-
-  return mapped;
-}
-
 function applyTheme() {
-  const rawTheme = themes[currentTheme][currentMode];
-  const theme = mapTheme(rawTheme);
-
+  const theme = themes[currentTheme][currentMode];
   for (const variable in theme) {
     document.documentElement.style.setProperty(variable, theme[variable]);
   }
