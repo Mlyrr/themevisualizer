@@ -13,7 +13,6 @@
   --silver:#C0C6CF;
   --bg:#0F172A;
   --text:#F8FAFC;
-  --green:#22C55E;
 }
 
 body{
@@ -129,7 +128,7 @@ color:var(--orange);
 margin-bottom:15px;
 }
 
-/* OPTIONS */
+/* 🔥 SINGLE CHOICE OPTIONS */
 .options{
 text-align:center;
 padding:50px 0;
@@ -149,42 +148,16 @@ border:2px solid var(--silver);
 border-radius:10px;
 cursor:pointer;
 transition:0.2s;
-display:flex;
-align-items:center;
-gap:10px;
 }
 
 .option:hover{
 border-color:var(--orange);
 }
 
-/* blå checkbox */
-.blue-check{
-  accent-color: var(--blue);
-}
-
-/* grøn + blå check */
-.green-custom{
-  appearance:none;
-  width:18px;
-  height:18px;
-  border:2px solid var(--green);
-  border-radius:4px;
-  position:relative;
-  cursor:pointer;
-}
-
-.green-custom:checked{
-  background:var(--green);
-}
-
-.green-custom:checked::after{
-  content:"✔";
-  color:var(--blue);
-  position:absolute;
-  left:2px;
-  top:-1px;
-  font-size:14px;
+.option.active{
+background:var(--orange);
+color:white;
+border-color:var(--orange);
 }
 
 footer{
@@ -241,47 +214,15 @@ border-top:3px solid var(--orange);
 
 </section>
 
+<!-- 🔥 SINGLE SELECT -->
 <section class="options">
 <h2>Vælg behandling</h2>
 
-<h3>Vælg én behandling</h3>
 <div class="option-grid">
-
-  <label class="option">
-    <input type="radio" name="single" value="Kroner">
-    Kroner
-  </label>
-
-  <label class="option">
-    <input type="radio" name="single" value="Proteser">
-    Proteser
-  </label>
-
-  <label class="option">
-    <input type="radio" name="single" value="Implantater">
-    Implantater
-  </label>
-
-</div>
-
-<h3>Tilføj ekstra (valgfrit)</h3>
-<div class="option-grid">
-
-  <label class="option">
-    <input type="checkbox" class="check blue-check" value="Rensning">
-    Rensning
-  </label>
-
-  <label class="option">
-    <input type="checkbox" class="check green-custom" value="Justering">
-    Justering
-  </label>
-
-  <label class="option">
-    <input type="checkbox" class="check" value="Ekstra kontrol">
-    Ekstra kontrol
-  </label>
-
+  <div class="option" onclick="selectOne(this)">Kroner</div>
+  <div class="option" onclick="selectOne(this)">Proteser</div>
+  <div class="option" onclick="selectOne(this)">Implantater</div>
+  <div class="option" onclick="selectOne(this)">Reparation</div>
 </div>
 
 <button class="cta" onclick="calculatePrice()">Få pris</button>
@@ -345,26 +286,20 @@ function toggleMode() {
   applyTheme();
 }
 
-function calculatePrice(){
-  const selectedRadio = document.querySelector('input[name="single"]:checked');
-  const checked = document.querySelectorAll(".check:checked");
+// 🔥 KUN ÉN VALGT
+function selectOne(el){
+  document.querySelectorAll(".option").forEach(o => o.classList.remove("active"));
+  el.classList.add("active");
+}
 
-  if(!selectedRadio){
-    alert("Vælg en hoved behandling");
+// 🔥 PRIS
+function calculatePrice(){
+  const selected = document.querySelector(".option.active");
+  if(!selected){
+    alert("Vælg en behandling først");
     return;
   }
-
-  let pris = 1500;
-  let tekst = "Valgt:\n- " + selectedRadio.value + "\n";
-
-  checked.forEach(c => {
-    tekst += "- " + c.value + "\n";
-    pris += 500;
-  });
-
-  tekst += "\nSamlet pris: " + pris + " kr";
-
-  alert(tekst);
+  alert("Pris for " + selected.textContent + ": ca. 1500 kr");
 }
 
 applyTheme();
