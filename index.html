@@ -13,7 +13,6 @@
   --silver:#C0C6CF;
   --bg:#0F172A;
   --text:#F8FAFC;
-  --green:#22C55E;
 }
 
 body{
@@ -158,33 +157,9 @@ gap:10px;
 border-color:var(--orange);
 }
 
-/* blå checkbox */
-.blue-check{
-  accent-color: var(--blue);
-}
-
-/* grøn + blå check */
-.green-custom{
-  appearance:none;
-  width:18px;
-  height:18px;
-  border:2px solid var(--green);
-  border-radius:4px;
-  position:relative;
-  cursor:pointer;
-}
-
-.green-custom:checked{
-  background:var(--green);
-}
-
-.green-custom:checked::after{
-  content:"✔";
-  color:var(--blue);
-  position:absolute;
-  left:2px;
-  top:-1px;
-  font-size:14px;
+/* 🔥 ALLE CHECKBOXES SAMME */
+.check{
+  accent-color: var(--orange);
 }
 
 footer{
@@ -268,12 +243,12 @@ border-top:3px solid var(--orange);
 <div class="option-grid">
 
   <label class="option">
-    <input type="checkbox" class="check blue-check" value="Rensning">
+    <input type="checkbox" class="check" value="Rensning">
     Rensning
   </label>
 
   <label class="option">
-    <input type="checkbox" class="check green-custom" value="Justering">
+    <input type="checkbox" class="check" value="Justering">
     Justering
   </label>
 
