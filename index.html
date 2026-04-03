@@ -119,7 +119,7 @@ text-shadow:
 0 0 24px rgba(62,166,255,0.4);
 }
 
-.about, .contact{
+.about{
 padding:50px 0;
 text-align:center;
 max-width:900px;
@@ -140,18 +140,24 @@ flex-wrap:wrap;
 .about-card{
 flex:1;
 min-width:250px;
-background:rgba(255,255,255,0.05);
-padding:20px;
-border-radius:12px;
-border:1px solid var(--neutral);
 text-align:left;
-line-height:1.6;
 }
 
-.muted{
-  color: var(--text-muted);
-  font-size: 15px;
-  line-height: 1.6;
+.about-title{
+font-size:18px;
+font-weight:600;
+margin-bottom:6px;
+}
+
+.about-sub{
+color:var(--text-muted);
+font-size:13px;
+margin-bottom:10px;
+}
+
+.about-text{
+font-size:15px;
+line-height:1.6;
 }
 
 .options{
@@ -240,6 +246,11 @@ footer{
 text-align:center;
 padding:30px 0;
 border-top:3px solid var(--primary);
+margin-top:150px;
+}
+
+.muted{
+  color: var(--text-muted);
 }
 </style>
 
@@ -282,15 +293,19 @@ border-top:3px solid var(--primary);
 <div class="about-grid">
 
 <div class="about-card">
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-</p>
+<div class="about-title">Moderne teknologi</div>
+<div class="about-sub">Avanceret udstyr og præcision</div>
+<div class="about-text">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</div>
 </div>
 
 <div class="about-card">
-<p>
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
+<div class="about-title">Personlig behandling</div>
+<div class="about-sub">Skræddersyet til dig</div>
+<div class="about-text">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus. Nulla porttitor accumsan tincidunt. Curabitur aliquet quam id dui posuere blandit.
+</div>
 </div>
 
 </div>
@@ -300,14 +315,12 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 <section class="options">
 <h2>Vælg behandling</h2>
 
-<h3>Vælg én behandling</h3>
 <div class="option-grid">
 <label class="option"><input type="radio" name="single"> Kroner</label>
 <label class="option"><input type="radio" name="single"> Proteser</label>
 <label class="option"><input type="radio" name="single"> Implantater</label>
 </div>
 
-<h3>Tilføj ekstra</h3>
 <div class="option-grid">
 <label class="option"><input type="checkbox" class="check"> Rensning</label>
 <label class="option"><input type="checkbox" class="check"> Justering</label>
@@ -324,7 +337,9 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 
 </section>
 
-<footer><p class="muted">© Demo</p></footer>
+<footer>
+<p class="muted">© Demo</p>
+</footer>
 
 </div>
 </div>
