@@ -12,7 +12,7 @@ light: {
 dark: {
 "--primary": "#FF7A1A",
 "--primary-light": "#FFB26B",
-"--accent": "#3EA6FF",
+"--accent": "#70bafc",
 "--neutral": "#C0C6CF",
 "--bg": "#0F172A",
 "--text": "#F8FAFC"
@@ -32,7 +32,7 @@ light: {
 dark: {
 "--primary": "#FF4D6D",
 "--primary-light": "#FF8FA3",
-"--accent": "#4DA3C7",
+"--accent": "#74dfbb",
 "--neutral": "#4CAF7A",
 "--bg": "#0B1220",
 "--text": "#F1F5F9"
