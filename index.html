@@ -232,6 +232,19 @@ input[type="radio"]:checked::after{
   border-radius: 50%;
 }
 
+/* NY: neutral radio række */
+.neutral-row input[type="radio"]{
+  border-color: var(--neutral);
+}
+
+.neutral-row input[type="radio"]:checked{
+  border-color: var(--neutral);
+}
+
+.neutral-row input[type="radio"]:checked::after{
+  background: var(--neutral);
+}
+
 .purple-row .check{
   border-color: var(--accent);
 }
@@ -270,25 +283,13 @@ margin-top:150px;
 <a href="#">Kontakt</a>
 </nav>
 
-<select id="themeSelect"></select> 
-<button class="themeButton" onclick="toggleMode()">Dark/Light</button>
+<select id="themeSelect"></select> <button class="themeButton" onclick="toggleMode()">Dark/Light</button>
+
 </header>
 
 <section class="hero">
 <h1>Professionel Tandteknik i Topkvalitet</h1>
-
 <p class="muted">Vi skaber smukke og holdbare løsninger til dit smil.</p>
-
-<p style="max-width:700px; margin:15px auto 0; line-height:1.6;">
-Hos os kombinerer vi mange års erfaring med den nyeste teknologi for at levere tandtekniske løsninger i absolut topklasse. 
-Vi arbejder med stor præcision og sans for detaljen, så du altid får et resultat, der både er æstetisk flot og funktionelt holdbart. 
-
-Vi ved, at hvert smil er unikt, og derfor tager vi os tid til at forstå dine behov og ønsker. 
-Gennem tæt dialog og personlig rådgivning sikrer vi, at du føler dig tryg gennem hele processen – fra første konsultation til det færdige resultat. 
-
-Vores mål er ikke bare at forbedre dit smil, men også din livskvalitet, ved at skabe løsninger der føles naturlige, komfortable og langtidsholdbare.
-</p>
-
 <button class="cta">Book tid</button>
 </section>
 
@@ -307,7 +308,7 @@ Vores mål er ikke bare at forbedre dit smil, men også din livskvalitet, ved at
 <div class="about-title">Moderne teknologi</div>
 <div class="about-sub">Avanceret udstyr og præcision</div>
 <div class="about-text">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 </div>
 </div>
 
@@ -315,11 +316,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor i
 <div class="about-title">Personlig behandling</div>
 <div class="about-sub">Skræddersyet til dig</div>
 <div class="about-text">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus...
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus. Nulla porttitor accumsan tincidunt. Curabitur aliquet quam id dui posuere blandit.
 </div>
 </div>
 
 </div>
+
 </section>
 
 <section class="options">
@@ -331,8 +333,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non nulla sit
 <label class="option"><input type="radio" name="single"> Implantater</label>
 </div>
 
-<!-- NY RÆKKE -->
-<div class="option-grid">
+<div class="option-grid neutral-row">
 <label class="option"><input type="radio" name="extra"> Blegning</label>
 <label class="option"><input type="radio" name="extra"> Tandretning</label>
 <label class="option"><input type="radio" name="extra"> Eftersyn</label>
@@ -351,6 +352,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non nulla sit
 </div>
 
 <button class="cta">Få pris</button>
+
 </section>
 
 <footer>
