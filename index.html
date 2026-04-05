@@ -189,6 +189,7 @@ background: rgba(255,122,26,0.15);
 
 .check,
 input[type="radio"]{
+  vertical-align: middle;
   appearance: none;
   width: 18px;
   height: 18px;
@@ -224,8 +225,9 @@ input[type="radio"]:checked{
 input[type="radio"]:checked::after{
   content: "";
   position: absolute;
-  top: 4px;
-  left: 4px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 8px;
   height: 8px;
   background: var(--primary);
@@ -288,7 +290,12 @@ margin-top:150px;
 
 <section class="hero">
 <h1>Professionel Tandteknik i Topkvalitet</h1>
-<p class="muted">Vi skaber smukke og holdbare løsninger til dit smil.</p>
+<p class="muted">
+Vi skaber smukke og holdbare løsninger til dit smil, hvor kvalitet, komfort og æstetik går hånd i hånd. 
+Vores arbejde er baseret på præcision og moderne teknologi, så du altid får et resultat, der både ser naturligt ud og føles behageligt i hverdagen. 
+ 
+
+</p>
 
 <p style="max-width:700px; margin:15px auto 0; line-height:1.6;">
 Hos os kombinerer vi mange års erfaring med den nyeste teknologi for at levere tandtekniske løsninger i absolut topklasse. 
