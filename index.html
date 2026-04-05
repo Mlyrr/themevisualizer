@@ -324,6 +324,62 @@ margin-top:150px;
 .over .value{
   color:#ff4d4d;
 }
+
+.dropdown-section{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  margin:60px 0;
+  flex-wrap:wrap;
+}
+
+.dropdown{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.dropdown label{
+  font-size:14px;
+  color:var(--text-muted);
+}
+
+.dropdown select{
+  padding:10px 15px;
+  border-radius:8px;
+  border:2px solid var(--neutral);
+  background:transparent;
+  color:var(--text);
+  cursor:pointer;
+}
+
+.dropdown select:hover{
+  border-color:var(--primary);
+}
+
+.blue-dropdown select{
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+
+
+.dropdown select{
+  padding:10px 15px;
+  border-radius:8px;
+  border:2px solid var(--neutral);
+  background:transparent;
+  color:var(--text);
+  cursor:pointer;
+  width:120px;
+
+  appearance:none; /* fjerner default stil */
+}
+
+select:hover{
+  border-color:var(--primary);
+}
 </style>
 
 </head>
@@ -465,7 +521,27 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non nulla sit
 <button class="cta">Få pris</button>
 
 </section>
+<div class="dropdown blue-dropdown">
 
+  <div class="dropdown">
+    <label>Vælg behandlingstype</label>
+    <select>
+      <option>Kroner</option>
+      <option>Proteser</option>
+      <option>Implantater</option>
+    </select>
+  </div>
+
+  <div class="dropdown">
+    <label>Vælg tidspunkt</label>
+    <select>
+      <option>Formiddag</option>
+      <option>Eftermiddag</option>
+      <option>Aften</option>
+    </select>
+  </div>
+
+</div>
 <footer>
 <p class="muted">© Demo</p>
 </footer>
