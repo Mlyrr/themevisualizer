@@ -265,6 +265,65 @@ margin-top:150px;
 .muted{
   color: var(--text-muted);
 }
+.progress-container{
+  display:flex;
+  gap:30px;
+  margin-top:40px;
+}
+
+.progress-item{
+  width:30%;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+
+.progress-top{
+  display:flex;
+  justify-content:space-between;
+  font-size:14px;
+}
+
+.value{
+  color:var(--primary);
+  font-weight:600;
+}
+
+/* bar */
+.bar{
+  position:relative;
+  height:10px;
+  background:rgba(255,255,255,0.1);
+  border-radius:10px;
+  overflow:hidden;
+}
+
+/* fyld */
+.fill{
+  height:100%;
+  background:var(--primary);
+  border-radius:10px;
+  transition:0.3s;
+}
+
+/* target linje */
+.target-line{
+  position:absolute;
+  top:0;
+  bottom:0;
+  width:0;
+  border-left:2px dashed white;
+  opacity:0.7;
+}
+
+/* 🔥 når den går over */
+.over .fill{
+  background:#ff4d4d;
+}
+
+.over .value{
+  color:#ff4d4d;
+}
 </style>
 
 </head>
@@ -338,7 +397,42 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non nulla sit
 </div>
 
 </div>
+<div class="progress-container">
 
+  <div class="progress-item" data-value="50" data-max="100" data-target="60">
+    <div class="progress-top">
+      <span>Erfaring</span>
+      <span class="value">50</span>
+    </div>
+    <div class="bar">
+      <div class="fill"></div>
+      <div class="target-line"></div>
+    </div>
+  </div>
+
+  <div class="progress-item" data-value="80" data-max="100" data-target="70">
+    <div class="progress-top">
+      <span>Kvalitet</span>
+      <span class="value">80</span>
+    </div>
+    <div class="bar">
+      <div class="fill"></div>
+      <div class="target-line"></div>
+    </div>
+  </div>
+
+  <div class="progress-item" data-value="95" data-max="100" data-target="90">
+    <div class="progress-top">
+      <span>Kundetilfredshed</span>
+      <span class="value">95</span>
+    </div>
+    <div class="bar">
+      <div class="fill"></div>
+      <div class="target-line"></div>
+    </div>
+  </div>
+
+</div>
 </section>
 
 <section class="options">
@@ -412,6 +506,27 @@ function toggleMode() {
 }
 
 applyTheme();
+
+document.querySelectorAll(".progress-item").forEach(item => {
+  const value = parseFloat(item.dataset.value);
+  const max = parseFloat(item.dataset.max);
+  const target = parseFloat(item.dataset.target);
+
+  const fill = item.querySelector(".fill");
+  const line = item.querySelector(".target-line");
+
+  const percent = (value / max) * 100;
+  const targetPercent = (target / max) * 100;
+
+  fill.style.width = percent + "%";
+  line.style.left = targetPercent + "%";
+
+  // hvis over target
+  if(value > target){
+    item.classList.add("over");
+  }
+});
+
 </script>
 
 </body>
