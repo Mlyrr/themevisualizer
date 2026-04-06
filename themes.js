@@ -24,7 +24,7 @@ name: "Cherry Breeze",
 light: {
 "--primary": "#D7263D",
 "--primary-light": "#F28B9A",
-"--accent": "#7EC8E3",
+"--accent": "#74dfbb",
 "--neutral": "#6FCF97",
 "--bg": "#FFFFFF",
 "--text": "#1F2933"
