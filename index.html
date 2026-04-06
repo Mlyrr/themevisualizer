@@ -361,11 +361,14 @@ margin-top:150px;
   background: var(--accent);
   color: white;
   border-color: var(--accent);
+  width:110px;
 }
 
+.blue-dropdown select:hover{
+  filter: brightness(1.1);
+}
 
-
-.dropdown select{
+#themeSelect{
   padding:10px 15px;
   border-radius:8px;
   border:2px solid var(--neutral);
@@ -373,13 +376,40 @@ margin-top:150px;
   color:var(--text);
   cursor:pointer;
   width:120px;
-
-  appearance:none; /* fjerner default stil */
+  appearance:none;
 }
 
-select:hover{
+#themeSelect:hover{
   border-color:var(--primary);
 }
+
+.neutral-row input[type="radio"]{
+  border-color: var(--accent);
+}
+
+.neutral-row input[type="radio"]:checked{
+  border-color: var(--accent);
+}
+
+.neutral-row input[type="radio"]:checked::after{
+  background: var(--accent);
+}
+
+.orange-dropdown select{
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+  width:110px;
+}
+
+.border-orange select{
+  border-color: var(--primary);
+}
+
+.border-blue select{
+  border-color: var(--accent);
+}
+
 </style>
 
 </head>
@@ -408,8 +438,6 @@ select:hover{
 <p class="muted">
 Vi skaber smukke og holdbare løsninger til dit smil, hvor kvalitet, komfort og æstetik går hånd i hånd. 
 Vores arbejde er baseret på præcision og moderne teknologi, så du altid får et resultat, der både ser naturligt ud og føles behageligt i hverdagen. 
- 
-
 </p>
 
 <p style="max-width:700px; margin:15px auto 0; line-height:1.6;">
@@ -521,9 +549,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non nulla sit
 <button class="cta">Få pris</button>
 
 </section>
-<div class="dropdown blue-dropdown">
+<div class="dropdown-section">
 
-  <div class="dropdown">
+  <div class="dropdown orange-dropdown">
     <label>Vælg behandlingstype</label>
     <select>
       <option>Kroner</option>
@@ -532,7 +560,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non nulla sit
     </select>
   </div>
 
-  <div class="dropdown">
+  <div class="dropdown blue-dropdown">
     <label>Vælg tidspunkt</label>
     <select>
       <option>Formiddag</option>
@@ -540,6 +568,28 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non nulla sit
       <option>Aften</option>
     </select>
   </div>
+
+  <!-- NY -->
+   <div class="dropdown border-orange">
+    <label>Vælg klinik</label>
+    <select>
+      <option>København</option>
+      <option>Aarhus</option>
+      <option>Odense</option>
+    </select>
+  </div>
+
+  <!-- 4 -->
+  <div class="dropdown border-blue">
+    <label>Vælg tandlæge</label>
+    <select>
+      <option>Dr. Jensen</option>
+      <option>Dr. Nielsen</option>
+      <option>Dr. Hansen</option>
+    </select>
+  </div>
+
+</div>
 
 </div>
 <footer>
