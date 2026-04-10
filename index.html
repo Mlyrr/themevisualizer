@@ -194,7 +194,7 @@ input[type="radio"]{
   appearance: none;
   width: 18px;
   height: 18px;
-  border: 2px solid var(--neutral);
+  border: 2px solid var(--primary);
   background: transparent;
   border-radius: 4px;
   cursor: pointer;
@@ -207,13 +207,18 @@ input[type="radio"]{
 }
 
 .check:checked::after{
-  content: "✔";
+  content: "";
   position: absolute;
-  top: -2px;
-  left: 3px;
-  font-size: 14px;
-  color: white;
+  left: 4px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }
+
+
 
 input[type="radio"]{
   border-radius: 50%;
@@ -370,14 +375,19 @@ margin-top:150px;
 }
 
 #themeSelect{
-  padding:10px 15px;
+  padding:10px 35px 10px 15px; /* ekstra plads til pil */
   border-radius:8px;
   border:2px solid var(--neutral);
   background:transparent;
   color:var(--text);
   cursor:pointer;
-  width:120px;
+  width:150px;
   appearance:none;
+
+  background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='20' viewBox='0 0 20 20' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M5 7l5 5 5-5'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 14px;
 }
 
 #themeSelect:hover{
@@ -463,7 +473,9 @@ Gennem tæt dialog og personlig rådgivning sikrer vi, at du føler dig tryg gen
 Vores mål er ikke bare at forbedre dit smil, men også din livskvalitet, ved at skabe løsninger der føles naturlige, komfortable og langtidsholdbare.
 </p>
 
-<h2 style="margin-top:25px; color:var(--primary);">Tryghed og service</h2>
+<h2 style="margin-top:25px; color:var(--primary); font-size:36px;">
+  Tryghed og service
+</h2>
 
 <p class="muted" style="max-width:700px; margin:10px auto 0; line-height:1.6;">
 Vi lægger stor vægt på, at du føler dig tryg gennem hele behandlingsforløbet.
