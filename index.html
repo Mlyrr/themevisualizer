@@ -257,17 +257,16 @@ input[type="radio"]:checked::after{
 }
 
 .neutral-row input[type="radio"]{
-  border-color: var(--neutral);
+  border:2px solid var(--primary) !important;
 }
 
 .neutral-row input[type="radio"]:checked{
-  border-color: var(--neutral);
+  border:2px solid var(--primary) !important;
 }
 
 .neutral-row input[type="radio"]:checked::after{
-  background: var(--neutral);
+  background: var(--accent) !important;
 }
-
 .purple-row .check{
   border-color: var(--accent);
 }
@@ -482,7 +481,7 @@ margin-top:150px;
 }
 
 .cta.secondary:hover{
-  background:#2d8ce0;
+  background: var(--accent); /* samme som normal */
 }
 
 .cta.outline{
@@ -510,6 +509,34 @@ margin-top:150px;
   letter-spacing: 1px;
 }
 
+/* kun fjerner runde hjørner – resten arver fra .cta */
+.square-buttons .cta{
+  border-radius:0;
+}
+
+.blue-full input[type="radio"]{
+  border-color: var(--accent);
+}
+
+.blue-full input[type="radio"]:checked{
+  border-color: var(--accent);
+}
+
+.blue-full input[type="radio"]:checked::after{
+  background: var(--accent);
+}
+
+.orange-full input[type="radio"]{
+  border-color: var(--primary);
+}
+
+.orange-full input[type="radio"]:checked{
+  border-color: var(--primary);
+}
+
+.orange-full input[type="radio"]:checked::after{
+  background: var(--primary);
+}
 
 </style>
 
@@ -657,6 +684,18 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non nulla sit
 <label class="option"><input type="radio" name="extra"> Eftersyn</label>
 </div>
 
+<div class="option-grid blue-full">
+  <label class="option"><input type="radio" name="extra2"> Tandrensning</label>
+  <label class="option"><input type="radio" name="extra2"> Fyldning</label>
+  <label class="option"><input type="radio" name="extra2"> Rodbehandling</label>
+</div>
+
+<div class="option-grid orange-full">
+  <label class="option"><input type="radio" name="extra3"> Konsultation</label>
+  <label class="option"><input type="radio" name="extra3"> Kontrol</label>
+  <label class="option"><input type="radio" name="extra3"> Akut tid</label>
+</div>
+
 <div class="option-grid">
 <label class="option"><input type="checkbox" class="check"> Rensning</label>
 <label class="option"><input type="checkbox" class="check"> Justering</label>
@@ -725,8 +764,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non nulla sit
 
 <div class="button-row square-buttons">
   <button class="cta square">Ekstra 1</button>
-  <button class="cta square">Ekstra 2</button>
-  <button class="cta square">Ekstra 3</button>
+  <button class="cta secondary square">Ekstra 2</button>
+  <button class="cta outline square">Ekstra 3</button>
+  <button class="cta ghost square">Ekstra 4</button>
 </div>
 
 <footer>
