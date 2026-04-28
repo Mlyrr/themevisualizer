@@ -83,7 +83,28 @@ dark: {
 "--neutral": "#3f1f8f",
 "--bg": "#0D1B2A",
 "--text": "#E6EDF3",
-"--glow": "#5B3DA6"
+"--glow": "#987fd6"
+}
+},
+green_orange: {
+name: "Green Orange",
+light: {
+"--primary": "#007a0a",        // grøn (main)
+"--primary-light": "#7CCB8A",  // lys grøn
+"--accent": "#FF8A3D",         // orange accent
+"--neutral": "#FFD6A5",        // lys orange
+"--bg": "#F8FAFC",
+"--text": "#1F2933",
+"--glow": "#FF8A3D"
+},
+dark: {
+"--primary": "#005c1c",        // mørk grøn
+"--primary-light": "#4CAF50",  // klar grøn
+"--accent": "#FF7A1A",         // stærk orange
+"--neutral": "#FFB26B",        // blød orange
+"--bg": "#0B1220",
+"--text": "#E6EDF3",
+"--glow": "#FF7A1A"
 }
 }
 
