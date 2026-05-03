@@ -106,6 +106,27 @@ dark: {
 "--text": "#E6EDF3",
 "--glow": "#FF7A1A"
 }
+},
+pastel_dream: {
+name: "Pastel Dream",
+light: {
+"--primary": "#F8BBD0",        // pastel pink
+"--primary-light": "#FCE4EC",  // meget lys pink
+"--accent": "#A5D6A7",         // pastel grøn
+"--neutral": "#FFF3B0",        // blød gul
+"--bg": "#FFFDF8",
+"--text": "#3A3A3A",
+"--glow": "#F8BBD0"
+},
+dark: {
+"--primary": "#F48FB1",        // lidt stærkere pink
+"--primary-light": "#F8BBD0",
+"--accent": "#81C784",         // grøn
+"--neutral": "#FFE082",        // varm gul
+"--bg": "#1E1E1E",
+"--text": "#F5F5F5",
+"--glow": "#F48FB1"
+}
 }
 
 
