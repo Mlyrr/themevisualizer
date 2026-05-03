@@ -49,7 +49,7 @@ name: "Blue Orange",
 light: {
 "--primary": "#2D6CDF",
 "--primary-light": "#A9CCFF",
-"--accent": "#FF8A3D",
+"--accent": "#ffbb3d",
 "--neutral": "#FFD6A5",
 "--bg": "#F8FAFC",
 "--text": "#1F2933",
@@ -58,7 +58,7 @@ light: {
 dark: {
 "--primary": "#1E3A8A",
 "--primary-light": "#3B82F6",
-"--accent": "#FF7A1A",
+"--accent": "#ffbb3d",
 "--neutral": "#FFB26B",
 "--bg": "#0B1220",
 "--text": "#E6EDF3",
@@ -83,7 +83,7 @@ dark: {
 "--neutral": "#3f1f8f",
 "--bg": "#0D1B2A",
 "--text": "#E6EDF3",
-"--glow": "#987fd6"
+"--glow": "#4800ff"
 }
 },
 green_orange: {
@@ -93,7 +93,7 @@ light: {
 "--primary-light": "#7CCB8A",  // lys grøn
 "--accent": "#FF8A3D",         // orange accent
 "--neutral": "#FFD6A5",        // lys orange
-"--bg": "#F8FAFC",
+"--bg": "#ffffff",
 "--text": "#1F2933",
 "--glow": "#FF8A3D"
 },
