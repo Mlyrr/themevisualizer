@@ -29,7 +29,7 @@ light: {
 "--primary-light": "#F28B9A",
 "--accent": "#94F3CF",
 "--neutral": "#56C283",
-"--bg": "#FFFFFF",
+"--bg": "#fff6f6",
 "--text": "#1F2933",
 "--glow": "#94F3CF"
 },
@@ -89,11 +89,11 @@ dark: {
 green_orange: {
 name: "Green Orange",
 light: {
-"--primary": "#007a0a",        // grøn (main)
+"--primary": "#01be11",        // grøn (main)
 "--primary-light": "#7CCB8A",  // lys grøn
 "--accent": "#FF8A3D",         // orange accent
 "--neutral": "#FFD6A5",        // lys orange
-"--bg": "#ffffff",
+"--bg": "#f3fff1",
 "--text": "#1F2933",
 "--glow": "#FF8A3D"
 },
@@ -113,19 +113,19 @@ light: {
 "--primary": "#F8BBD0",        // pastel pink
 "--primary-light": "#FCE4EC",  // meget lys pink
 "--accent": "#A5D6A7",         // pastel grøn
-"--neutral": "#FFF3B0",        // blød gul
+"--neutral": "#faeda5",        // blød gul
 "--bg": "#FFFDF8",
 "--text": "#3A3A3A",
-"--glow": "#F8BBD0"
+"--glow": "#fcec60"
 },
 dark: {
 "--primary": "#F48FB1",        // lidt stærkere pink
 "--primary-light": "#F8BBD0",
 "--accent": "#81C784",         // grøn
 "--neutral": "#FFE082",        // varm gul
-"--bg": "#1E1E1E",
+"--bg": "#1b1510",
 "--text": "#F5F5F5",
-"--glow": "#F48FB1"
+"--glow": "#c7b72b"
 }
 }
 
