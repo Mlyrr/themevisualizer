@@ -6,6 +6,7 @@ light: {
 "--primary": "#FF7A1A",
 "--primary-light": "#FFB26B",
 "--accent": "#3EA6FF",
+"--accent-light": "#9BD3FF",
 "--neutral": "#C0C6CF",
 "--bg": "#FFFFFF",
 "--theme": "#FFFFFF",
@@ -17,6 +18,7 @@ dark: {
 "--primary": "#FF7A1A",
 "--primary-light": "#FFB26B",
 "--accent": "#70BAFC",
+"--accent-light": "#B7DCFE",
 "--neutral": "#C0C6CF",
 "--bg": "#0F172A",
 "--theme": "#020617",
@@ -32,6 +34,7 @@ light: {
 "--primary": "#D7263D",
 "--primary-light": "#F28B9A",
 "--accent": "#94F3CF",
+"--accent-light": "#C9F9E7",
 "--neutral": "#56C283",
 "--bg": "#fff6f6",
 "--theme": "#FFFFFF",
@@ -43,6 +46,7 @@ dark: {
 "--primary": "#FF4D6D",
 "--primary-light": "#FF8FA3",
 "--accent": "#94F3CF",
+"--accent-light": "#C9F9E7",
 "--neutral": "#56C283",
 "--bg": "#0B1220",
 "--theme": "#111827",
@@ -58,6 +62,7 @@ light: {
 "--primary": "#2D6CDF",
 "--primary-light": "#A9CCFF",
 "--accent": "#ffbb3d",
+"--accent-light": "#FFD98A",
 "--neutral": "#FFD6A5",
 "--bg": "#F8FAFC",
 "--theme": "#FFFFFF",
@@ -69,6 +74,7 @@ dark: {
 "--primary": "#1E3A8A",
 "--primary-light": "#3B82F6",
 "--accent": "#ffbb3d",
+"--accent-light": "#FFD98A",
 "--neutral": "#FFB26B",
 "--bg": "#0B1220",
 "--theme": "#111827",
@@ -84,6 +90,7 @@ light: {
 "--primary": "#cb7cc0",
 "--primary-light": "#e8d1ea",
 "--accent": "#B388EB",
+"--accent-light": "#D8BEF6",
 "--neutral": "#A9CCFF",
 "--bg": "#F8FAFC",
 "--theme": "#FFFFFF",
@@ -94,6 +101,7 @@ dark: {
 "--primary": "#8f2f92",
 "--primary-light": "#eb82c3",
 "--accent": "#246fdf",
+"--accent-light": "#7FAAF0",
 "--neutral": "#3f1f8f",
 "--bg": "#0D1B2A",
 "--theme": "#111827",
@@ -105,10 +113,11 @@ dark: {
 green_orange: {
 name: "Green Orange",
 light: {
-"--primary": "#01be11",        // grøn (main)
-"--primary-light": "#7CCB8A",  // lys grøn
-"--accent": "#FF8A3D",         // orange accent
-"--neutral": "#FFD6A5",        // lys orange
+"--primary": "#01be11",
+"--primary-light": "#7CCB8A",
+"--accent": "#FF8A3D",
+"--accent-light": "#FFC29D",
+"--neutral": "#FFD6A5",
 "--bg": "#f3fff1",
 "--theme": "#FFFFFF",
 "--text": "#1F2933",
@@ -116,10 +125,11 @@ light: {
 "--glow": "#FF8A3D"
 },
 dark: {
-"--primary": "#005c1c",        // mørk grøn
-"--primary-light": "#4CAF50",  // klar grøn
-"--accent": "#FF7A1A",         // stærk orange
-"--neutral": "#FFB26B",        // blød orange
+"--primary": "#005c1c",
+"--primary-light": "#4CAF50",
+"--accent": "#FF7A1A",
+"--accent-light": "#FFB26B",
+"--neutral": "#FFB26B",
 "--bg": "#0B1220",
 "--theme": "#111827",
 "--text": "#E6EDF3",
@@ -130,10 +140,11 @@ dark: {
 pastel_dream: {
 name: "Pastel Dream",
 light: {
-"--primary": "#F8BBD0",        // pastel pink
-"--primary-light": "#FCE4EC",  // meget lys pink
-"--accent": "#A5D6A7",         // pastel grøn
-"--neutral": "#faeda5",        // blød gul
+"--primary": "#F8BBD0",
+"--primary-light": "#FCE4EC",
+"--accent": "#A5D6A7",
+"--accent-light": "#D4EED5",
+"--neutral": "#faeda5",
 "--bg": "#FFFDF8",
 "--theme": "#FFFFFF",
 "--text": "#3A3A3A",
@@ -141,15 +152,16 @@ light: {
 "--glow": "#fcec60"
 },
 dark: {
-"--primary": "#F48FB1",        // lidt stærkere pink
+"--primary": "#F48FB1",
 "--primary-light": "#F8BBD0",
-"--accent": "#81C784",         // grøn
-"--neutral": "#FFE082",        // varm gul
+"--accent": "#81C784",
+"--accent-light": "#B9DEBA",
+"--neutral": "#FFE082",
 "--bg": "#1b1510",
 "--theme": "#111827",
 "--text": "#F5F5F5",
 "--text-muted": "rgba(245, 245, 245, 0.6)",
-"--glow": "#c7b72b"
+"--glow": "#48881e"
 }
 }
 
