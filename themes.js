@@ -12,7 +12,10 @@ light: {
 "--theme": "#FFFFFF",
 "--text": "#1F2933",
 "--text-muted": "rgba(31, 41, 51, 0.6)",
-"--glow": "#3EA6FF"
+"--glow": "#3EA6FF",
+"--bar-1": "#FF7A1A",
+"--bar-2": "#3EA6FF",
+"--bar-3": "#FFB26B"
 },
 dark: {
 "--primary": "#FF7A1A",
@@ -24,7 +27,10 @@ dark: {
 "--theme": "#020617",
 "--text": "#F8FAFC",
 "--text-muted": "rgba(248, 250, 252, 0.6)",
-"--glow": "#70BAFC"
+"--glow": "#70BAFC",
+"--bar-1": "#FF7A1A",
+"--bar-2": "#70BAFC",
+"--bar-3": "#FFB26B"
 }
 },
 
@@ -40,7 +46,10 @@ light: {
 "--theme": "#FFFFFF",
 "--text": "#1F2933",
 "--text-muted": "rgba(31, 41, 51, 0.6)",
-"--glow": "#94F3CF"
+"--glow": "#94F3CF",
+"--bar-1": "#D7263D",
+"--bar-2": "#94F3CF",
+"--bar-3": "#56C283"
 },
 dark: {
 "--primary": "#FF4D6D",
@@ -52,7 +61,10 @@ dark: {
 "--theme": "#111827",
 "--text": "#F1F5F9",
 "--text-muted": "rgba(241, 245, 249, 0.6)",
-"--glow": "#94F3CF"
+"--glow": "#94F3CF",
+"--bar-1": "#FF4D6D",
+"--bar-2": "#94F3CF",
+"--bar-3": "#56C283"
 }
 },
 
@@ -68,7 +80,10 @@ light: {
 "--theme": "#FFFFFF",
 "--text": "#1F2933",
 "--text-muted": "rgba(31, 41, 51, 0.6)",
-"--glow": "#FF8A3D"
+"--glow": "#FF8A3D",
+"--bar-1": "#2D6CDF",
+"--bar-2": "#ffbb3d",
+"--bar-3": "#FFD6A5"
 },
 dark: {
 "--primary": "#1E3A8A",
@@ -80,7 +95,10 @@ dark: {
 "--theme": "#111827",
 "--text": "#E6EDF3",
 "--text-muted": "rgba(230, 237, 243, 0.6)",
-"--glow": "#e3e700"
+"--glow": "#e3e700",
+"--bar-1": "#1E3A8A",
+"--bar-2": "#ffbb3d",
+"--bar-3": "#FFB26B"
 }
 },
 
@@ -95,7 +113,10 @@ light: {
 "--bg": "#F8FAFC",
 "--theme": "#FFFFFF",
 "--text": "#1F2933",
-"--text-muted": "rgba(31, 41, 51, 0.6)"
+"--text-muted": "rgba(31, 41, 51, 0.6)",
+"--bar-1": "#cb7cc0",
+"--bar-2": "#B388EB",
+"--bar-3": "#A9CCFF"
 },
 dark: {
 "--primary": "#8f2f92",
@@ -107,7 +128,10 @@ dark: {
 "--theme": "#111827",
 "--text": "#E6EDF3",
 "--text-muted": "rgba(230, 237, 243, 0.6)",
-"--glow": "#4800ff"
+"--glow": "#4800ff",
+"--bar-1": "#8f2f92",
+"--bar-2": "#246fdf",
+"--bar-3": "#3f1f8f"
 }
 },
 green_orange: {
@@ -122,7 +146,10 @@ light: {
 "--theme": "#FFFFFF",
 "--text": "#1F2933",
 "--text-muted": "rgba(31, 41, 51, 0.6)",
-"--glow": "#FF8A3D"
+"--glow": "#FF8A3D",
+"--bar-1": "#01be11",
+"--bar-2": "#FF8A3D",
+"--bar-3": "#FFD6A5"
 },
 dark: {
 "--primary": "#005c1c",
@@ -134,7 +161,10 @@ dark: {
 "--theme": "#111827",
 "--text": "#E6EDF3",
 "--text-muted": "rgba(230, 237, 243, 0.6)",
-"--glow": "#FF7A1A"
+"--glow": "#FF7A1A",
+"--bar-1": "#005c1c",
+"--bar-2": "#FF7A1A",
+"--bar-3": "#FFB26B"
 }
 },
 pastel_dream: {
@@ -149,7 +179,10 @@ light: {
 "--theme": "#FFFFFF",
 "--text": "#3A3A3A",
 "--text-muted": "rgba(58, 58, 58, 0.6)",
-"--glow": "#fcec60"
+"--glow": "#fcec60",
+"--bar-1": "#F8BBD0",
+"--bar-2": "#A5D6A7",
+"--bar-3": "#faeda5"
 },
 dark: {
 "--primary": "#F48FB1",
@@ -161,7 +194,10 @@ dark: {
 "--theme": "#111827",
 "--text": "#F5F5F5",
 "--text-muted": "rgba(245, 245, 245, 0.6)",
-"--glow": "#48881e"
+"--glow": "#48881e",
+"--bar-1": "#F48FB1",
+"--bar-2": "#81C784",
+"--bar-3": "#FFE082"
 }
 }
 
