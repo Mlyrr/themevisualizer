@@ -114,6 +114,7 @@ light: {
 "--theme": "#FFFFFF",
 "--text": "#1F2933",
 "--text-muted": "rgba(31, 41, 51, 0.6)",
+"--glow": "#4800ff",
 "--bar-1": "#cb7cc0",
 "--bar-2": "#B388EB",
 "--bar-3": "#A9CCFF"
